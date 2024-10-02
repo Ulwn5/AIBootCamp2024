@@ -1,50 +1,11 @@
-# 🎈 Streamlit + LLM Examples App
+# chat-with-your-docs
+Chat with your Text Documents (upto 100MB in size)
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)
+**Tech Stack Used:** 
+- [LlamaIndex](https://docs.llamaindex.ai/en/stable/module_guides/loading/simpledirectoryreader/) for parsing documents
+- [ChromaDB](https://docs.trychroma.com/) for vector database storage, ranking and retrieval
+- Choice of OpenAI/HuggingFace as the LLM (Large Language Model) for both embedding and inference. Obtain an API key from [here for OpenAI](https://platform.openai.com/api-keys) or [here for HuggingFace](https://hf.co/settings/tokens)
+  - Embedding models are `sentence-transformers/all-MiniLM-L6-v2` for HF and `text-embedding-3-small` for OpenAI
+  - Inference models are `meta-llama/Meta-Llama-3.1-8B-Instruct` for HF and `gpt-4o-mini` for OpenAI
 
-Starter examples for building LLM apps with Streamlit.
-
-## Overview of the App
-
-This app showcases a growing collection of LLM minimum working examples.
-
-Current examples include:
-
-- Chatbot
-- File Q&A
-- Chat with Internet search
-- LangChain Quickstart
-- LangChain PromptTemplate
-- Chat with user feedback
-
-## Demo App
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llm-examples.streamlit.app/)
-
-### Get an OpenAI API key
-
-You can get your own OpenAI API key by following the following instructions:
-
-1. Go to https://platform.openai.com/account/api-keys.
-2. Click on the `+ Create new secret key` button.
-3. Next, enter an identifier name (optional) and click on the `Create secret key` button.
-
-### Enter the OpenAI API key in Streamlit Community Cloud
-
-To set the OpenAI API key as an environment variable in Streamlit apps, do the following:
-
-1. At the lower right corner, click on `< Manage app` then click on the vertical "..." followed by clicking on `Settings`.
-2. This brings the **App settings**, next click on the `Secrets` tab and paste the API key into the text box as follows:
-
-```sh
-OPENAI_API_KEY='xxxxxxxxxx'
-```
-
-## Run it locally
-
-```sh
-virtualenv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run Chatbot.py
-```
+Try out the App [here](https://chatwithyourdocuments.streamlit.app/)

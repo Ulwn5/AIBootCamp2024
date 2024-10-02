@@ -1,8 +1,19 @@
-streamlit>=1.28
-langchain>=0.0.217
-openai>=1.2
-duckduckgo-search
-anthropic>=0.3.0
-trubrics>=1.4.3
-streamlit-feedback
-langchain-community
+chromadb==0.5.5
+llama_index==0.10.59
+llama-index-vector-stores-chroma==0.1.10
+
+
+# HuggingFace
+huggingface_hub==0.23.5
+llama-index-embeddings-huggingface==0.2.2
+llama-index-llms-huggingface==0.2.5
+llama-index-llms-huggingface-api==0.1.0
+transformers==4.43.2
+
+# OpenAI
+llama-index-embeddings-openai==0.1.11
+llama-index-llms-openai==0.1.27
+openai==1.38.0
+Requests==2.32.3
+streamlit==1.36.0
+pysqlite3-binary
